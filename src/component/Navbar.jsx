@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
@@ -23,19 +24,19 @@ const Navbar = () => {
           <div className="collapse navbar-collapse justify-content-center fw-medium text-muted mt-1 mb-1" id="navbarNavDropdown">
             <ul className="navbar-nav text-center">
               <li className="nav-item">
-                <a className="nav-link fs-6 me-2" href="/" aria-label="Go to Home">HOME</a>
+                <Link className="nav-link fs-6 me-2" to="/" aria-label="Go to Home">HOME</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link fs-6 me-2" href="/about" aria-label="Go to About">ABOUT</a>
+                <Link className="nav-link fs-6 me-2" to="/about" aria-label="Go to About">ABOUT</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link fs-6 me-2" href="/work" aria-label="Go to Work">WORK</a>
+                <Link className="nav-link fs-6 me-2" to="/work" aria-label="Go to Work">WORK</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link fs-6 me-2" href="/skill" aria-label="Go to Skills">SKILL</a>
+                <Link className="nav-link fs-6 me-2" to="/skill" aria-label="Go to Skills">SKILL</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link fs-6 me-2" href="/contacts" aria-label="Go to Contacts">CONTACT</a>
+                <Link className="nav-link fs-6 me-2" to="/contacts" aria-label="Go to Contacts">CONTACT</Link>
               </li>
             </ul>
           </div>
