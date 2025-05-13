@@ -1,0 +1,41 @@
+
+.card-about {
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+    margin-right: 4rem !important;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(200, 246, 255);
+    border: none !important;
+    width: 250px !important;
+    
+   }
+   .card-img-about {
+    height: 14rem !important;
+    width: 14.4rem !important;
+   
+  }
+  
+  .card-about:hover {
+    transform: scale(3.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2) !important;
+  } 
+
+  .card-text {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #333;
+  text-align: left;
+  padding: 4px;
+ 
+}
+
+.card-text:hover {
+  color: #007bff; /* Add a color change on hover */
+  cursor: pointer; /* Optional: makes it feel interactive */
+}
+
+
+.card-img-about {
+  /* max-height: 200px; */
+  object-fit: cover;
+}

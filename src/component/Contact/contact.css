@@ -1,0 +1,352 @@
+/* Main container styling */
+.contacts-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  font-family: 'Poppins', 'Arial', sans-serif;
+  color: #333;
+  background-color: #fafafa;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Page title styling */
+.contacts-container h1 {
+  text-align: center;
+  margin-bottom: 50px;
+  color: #2c3e50;
+  font-size: 42px;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.contacts-container h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, #3498db, #2c3e50);
+  border-radius: 2px;
+}
+
+/* Content layout */
+.contacts-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-bottom: 70px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  padding: 40px;
+}
+
+/* Contact info section */
+.contact-info {
+  flex: 1;
+  min-width: 300px;
+  padding: 30px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-info::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(to bottom, #3498db, #2c3e50);
+  border-radius: 3px;
+}
+
+.contact-info h2, .contact-form h2, .map-container h2 {
+  margin-bottom: 30px;
+  color: #2c3e50;
+  font-size: 28px;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.contact-info h2::after, .contact-form h2::after, .map-container h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: #3498db;
+  border-radius: 1.5px;
+}
+
+/* Contact info items */
+.info-item {
+  display: flex;
+  margin-bottom: 25px;
+  align-items: flex-start;
+  transition: transform 0.3s;
+}
+
+.info-item:hover {
+  transform: translateX(5px);
+}
+
+.info-item i {
+  margin-right: 20px;
+  color: #3498db;
+  font-size: 22px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(52, 152, 219, 0.1);
+  border-radius: 50%;
+  padding: 20px;
+}
+
+.info-item p {
+  line-height: 1.6;
+  color: #555;
+  font-size: 16px;
+}
+
+/* Contact form section */
+.contact-form {
+  flex: 1.2;
+  min-width: 300px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Form styling */
+.form-group {
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: #2c3e50;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+  background-color: #fff;
+}
+
+.form-group input:focus + label, .form-group textarea:focus + label {
+  color: #3498db;
+}
+
+/* Submit button */
+.submit-btn {
+  background: linear-gradient(to right, #3498db, #2c3e50);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: block;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3);
+}
+
+.submit-btn:hover {
+  background: linear-gradient(to right, #2c3e50, #3498db);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(52, 152, 219, 0.4);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(52, 152, 219, 0.4);
+}
+
+/* Success message */
+.success-message {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  border-left: 5px solid #28a745;
+  animation: fadeIn 0.5s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.success-message p {
+  font-size: 18px;
+  margin: 0;
+}
+
+
+
+
+
+/* Responsive design */
+/* @media (max-width: 992px) {
+  .contacts-content {
+    padding: 30px;
+  }
+} */
+
+@media (max-width: 768px) {
+  .contacts-container {
+    padding: 40px 15px;
+  }
+  
+  .contacts-content {
+    flex-direction: column;
+    gap: 30px;
+    padding: 25px;
+  }
+  
+  .contact-info, .contact-form {
+    width: 100%;
+    padding: 25px;
+  }
+  
+  .contacts-container h1 {
+    font-size: 32px;
+  }
+  
+  .contact-info h2, .contact-form h2, .map-container h2 {
+    font-size: 24px;
+  }
+  
+  
+}
+ 
+@media (max-width: 480px) {
+  .contacts-container {
+    padding: 30px 10px;
+  }
+  
+  .contacts-content {
+    padding: 20px;
+  }
+  
+  .contact-info, .contact-form {
+    padding: 20px;
+  }
+  
+  .info-item i {
+    padding: 15px;
+    font-size: 18px;
+  }
+  
+  .social-links a {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .form-group input, .form-group textarea {
+    padding: 12px;
+  }
+  
+  .submit-btn {
+    padding: 12px 25px;
+  }
+  
+  .map {
+    height: 300px;
+  }
+}
+
+/* Additional styling for form elements */
+.form-group input::placeholder, .form-group textarea::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+
+/* Form validation visual feedback */
+.form-group input:invalid:focus, .form-group textarea:invalid:focus {
+  border-color: #e74c3c;
+  box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.2);
+}
+
+/* Hover effects for form elements */
+.form-group:hover label {
+  color: #3498db;
+}
+
+/* Animation for form elements */
+@keyframes inputFocus {
+  0% { transform: scale(0.98); }
+  70% { transform: scale(1.001); }
+  100% { transform: scale(1); }
+}
+
+.form-group input:focus, .form-group textarea:focus {
+  animation: inputFocus 0.3s ease-in-out;
+}
+
+/* Custom scrollbar for textarea */
+.form-group textarea {
+  scrollbar-width: thin;
+  scrollbar-color: #3498db #f1f1f1;
+}
+
+.form-group textarea::-webkit-scrollbar {
+  width: 8px;
+}
+
+.form-group textarea::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.form-group textarea::-webkit-scrollbar-thumb {
+  background-color: #3498db;
+  border-radius: 4px;
+}
+
+/* Card-like effect for sections */
+.contact-info, .contact-form, .map-container {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-info:hover, .contact-form:hover, .map-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+
