@@ -19,7 +19,7 @@ const Skill = () => {
                 { name: 'CSS3', icon: 'fab fa-css3-alt', level: 90 },
                 { name: 'JavaScript', icon: 'fab fa-js', level: 85 },
                 { name: 'React', icon: 'fab fa-react', level: 80 },
-                { name: 'Vue.js', icon: 'fab fa-vuejs', level: 75 },
+                { name: 'Vite', icon: 'fab fa-vuejs', level: 75 },
                 { name: 'Sass', icon: 'fab fa-sass', level: 70 },
               ].map((skill, idx) => (
                 <div className="skill-card" key={idx}>
