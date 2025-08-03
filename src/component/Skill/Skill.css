@@ -1,19 +1,16 @@
 /* --- Root Variables --- */
 :root {
-  --primary-color:#4a6cf7;
+  --primary-color: #4a6cf7;
   --secondary-color: #f9eeb1;
-  --accent-glow: #130b06!important; 
+  --accent-glow: #130b06 !important;
   --background-color-dark: #baecef;
-  --background-color-light: #b3ebef ;
-  --card-bg:#e3e1e1;;
+  --background-color-light: #b3ebef;
+  --card-bg: #e3e1e1;
   --text-primary: #041f3a;
-  --text-secondary:#4a6cf7;
+  --text-secondary: #4a6cf7;
   --border-color: #130101;
   --border-radius: 0.75rem;
 }
-
-
-
 
 /* --- Base & Typography --- */
 body {
@@ -22,31 +19,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* --- NEW: Animated Gradient Background --- */
-@keyframes animate-gradient {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-.sae-section {
-  color: var(--text-primary);
-  padding: 5rem 1rem;
-  background: linear-gradient(-45deg, var(--background-color-dark), var(--background-color-light), #b3ebef,  #b3ebef);
-  background-size: 400% 400%;
-  animation: animate-gradient 25s ease infinite;
-}
-
-.sae-container {
-  max-width: 900px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 5rem;
-}
-
-<<<<<<< HEAD
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-bottom: 1rem;
   font-weight: 700;
   line-height: 2;
@@ -54,7 +32,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 4rem;
-  text-align: center ;
+  text-align: center;
 }
 
 h2 {
@@ -62,7 +40,7 @@ h2 {
   padding-bottom: 0.5rem;
   border-bottom: 2px solid var(--primary-color);
   margin-bottom: 1.5rem;
-  display: inline-block ;
+  display: inline-block;
 }
 
 h3 {
@@ -72,7 +50,7 @@ h3 {
 
 p {
   margin-bottom: 1rem;
-  color: var(--text-light);
+  color: var(--text-primary); /* CORRECTED: Was --text-light which is not defined */
 }
 
 a {
@@ -87,64 +65,49 @@ a:hover {
 
 section {
   margin-bottom: 3rem;
-  
 }
-
 
 .hidden {
   display: none;
 }
 
-
-
-
-/* Skills Section */
-
-.skills-category {
-  margin-bottom: 2.5rem;
+/* --- Animated Gradient Background & Sections --- */
+@keyframes animate-gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-  gap: 2rem;
-  
-  
+.sae-section {
+  color: var(--text-primary);
+  padding: 5rem 1rem;
+  background: linear-gradient(-45deg, var(--background-color-dark), var(--background-color-light), #b3ebef, #b3ebef);
+  background-size: 400% 400%;
+  animation: animate-gradient 25s ease infinite;
 }
 
-
-.skill-card {
-  display: flex !important;
-  align-items: center;
-  gap: 1rem;
-  background-color: var(--card-background);
-  padding: 1.2rem;
-  border-radius: 8px;
-  transition: transform 0.3s, box-shadow 0.3s;
- height: 100px;
-  width: 18rem;
+.sae-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
 }
 
-
-.skill-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.skill-icon {
-=======
 .sae-section-title {
->>>>>>> 3890684 (Updated portfolio with new features/design)
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 2.5rem;
   letter-spacing: -1.5px;
   background: linear-gradient(90deg, rgb(6, 32, 68), var(--text-secondary) 100%);
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }
 
 
-/* --- NEW: Unified "Live" Border Card Style --- */
+/* --- Unified "Live" Border Card Style --- */
 .skills-unified-box,
 .sae-timeline-content {
   background-color: var(--card-bg);
@@ -159,7 +122,8 @@ section {
 .sae-timeline-content::before {
   content: '';
   position: absolute;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   border-radius: inherit;
@@ -180,8 +144,8 @@ section {
   z-index: 2; /* Keep content above the glow */
 }
 
-/* Original JS needed for mouse tracking, but we can fake it on hover */
-.skills-unified-box:hover, .sae-timeline-content:hover {
+.skills-unified-box:hover,
+.sae-timeline-content:hover {
   --mouse-x: 50%;
   --mouse-y: 50%;
 }
@@ -193,8 +157,13 @@ section {
   animation: fadeIn 0.5s ease-out both;
 }
 
-.skill-subsection { padding: 1rem; }
-.skill-subsection:last-child { margin-bottom: 0; }
+.skill-subsection {
+  padding: 1rem;
+}
+
+.skill-subsection:last-child {
+  margin-bottom: 0;
+}
 
 .skill-subsection-title {
   font-size: 1.25rem;
@@ -214,7 +183,6 @@ section {
 }
 
 .sae-skill-tag {
-  /* background-color: var(--background-color-light); */
   color: var(--text-secondary);
   border-radius: 6px;
   border: 1px solid var(--border-color);
@@ -224,7 +192,7 @@ section {
   justify-content: center;
   gap: 0.75rem;
   text-align: center;
-  font-size: 14px ;
+  font-size: 14px;
   font-weight: bold;
   aspect-ratio: 1 / 1;
   transition: all 0.3s ease-in-out;
@@ -236,7 +204,6 @@ section {
 }
 
 .sae-skill-tag:hover {
- 
   transform: scale(1.05);
   box-shadow: 0 0 15px var(--primary-color);
 }
@@ -252,13 +219,58 @@ section {
 
 
 /* --- Timeline Section --- */
-.sae-timeline-container { position: relative; padding: 1rem 0 1rem 1.5rem; }
-.sae-timeline-container::before { content: ''; position: absolute; top: 10px; left: 0; height: calc(100% - 10px); width: 3px; background: linear-gradient(to bottom, var(--accent-glow) 0%, transparent 100%); }
-.sae-timeline-item { display: flex; gap: 1.5rem; position: relative; padding-left: 2rem; margin-bottom: 3rem; animation: fadeIn 0.5s ease-out both; }
-.sae-timeline-item:nth-child(2) { animation-delay: 0.2s; }
-.sae-timeline-item:last-child { margin-bottom: 0; }
-.sae-timeline-icon-wrapper { position: absolute; left: -9px; top: 0; z-index: 10; }
-.sae-timeline-icon { width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: white; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; border: none; box-shadow: 0 0 20px var(--accent-glow); }
+.sae-timeline-container {
+  position: relative;
+  padding: 1rem 0 1rem 1.5rem;
+}
+
+.sae-timeline-container::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 0;
+  height: calc(100% - 10px);
+  width: 3px;
+  background: linear-gradient(to bottom, var(--accent-glow) 0%, transparent 100%);
+}
+
+.sae-timeline-item {
+  display: flex;
+  gap: 1.5rem;
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 3rem;
+  animation: fadeIn 0.5s ease-out both;
+}
+
+.sae-timeline-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.sae-timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.sae-timeline-icon-wrapper {
+  position: absolute;
+  left: -9px;
+  top: 0;
+  z-index: 10;
+}
+
+.sae-timeline-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  border: none;
+  box-shadow: 0 0 20px var(--accent-glow);
+}
 
 .sae-timeline-content {
   padding: 1.5rem 2rem;
@@ -269,7 +281,41 @@ section {
   transform: translateY(-5px);
 }
 
-.sae-timeline-date { font-size: 0.85rem; font-weight: 500; color: var(--text-secondary); margin-bottom: 0.5rem; }
-.sae-timeline-title { font-size: 1.3rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.25rem; }
-.sae-timeline-subtitle { font-size: 1.05rem; font-weight: 500; color: var(--primary-color); margin-bottom: 1rem; }
-.sae-timeline-description { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; }
+.sae-timeline-date {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.sae-timeline-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.sae-timeline-subtitle {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.sae-timeline-description {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
