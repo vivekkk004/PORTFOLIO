@@ -4,7 +4,7 @@ import './contact.css';
 
 import React from 'react';
 import { Phone, Mail, MapPin } from 'lucide-react';
-import './Contact.css';
+
 
 const Contact = () => {
   return (
