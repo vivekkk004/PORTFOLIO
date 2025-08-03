@@ -68,8 +68,7 @@ const Skill = () => {
         <div className="sae-section">
             <div className="sae-container">
 
-<<<<<<< HEAD
-          {/* Front-End */}
+
           <div className="skills-category">
             <h3>Front-End Development</h3>
             <div className="skills-grid" >
@@ -89,7 +88,7 @@ const Skill = () => {
                     <h4>{skill.name}</h4>
                     <div className="skill-bar">
                       <div className="skill-level" style={{ width: `${skill.level}%` }}></div>
-=======
+
                 {/* --- Technologies & Skills Section (Now in one box) --- */}
                 <div className="sae-skills">
                     <h2 className="sae-section-title">Technologies & Skills</h2>
@@ -107,7 +106,7 @@ const Skill = () => {
                                 </div>
                             </div>
                         ))}
->>>>>>> 3890684 (Updated portfolio with new features/design)
+
                     </div>
                 </div>
 
