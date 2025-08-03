@@ -1,9 +1,7 @@
-
 import React, { useState } from 'react';
 import './contact.css';
-
-import React from 'react';
 import { Phone, Mail, MapPin } from 'lucide-react';
+
 
 
 const Contact = () => {
