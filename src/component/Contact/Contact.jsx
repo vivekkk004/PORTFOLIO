@@ -1,89 +1,83 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import './contact.css';
+=======
+import React from 'react';
+import { Phone, Mail, MapPin } from 'lucide-react';
+import './Contact.css';
+>>>>>>> 3890684 (Updated portfolio with new features/design)
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
-
-  const handleChange = (e) => {
-    setFormData((prev) => ({
-      ...prev,
-      [e.target.name]: e.target.value
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    alert('Message sent successfully!');
-    setFormData({ name: '', email: '', message: '' });
-  };
-
   return (
-    <div className="contacts-container py-5 px-3">
-      <h1 className="contact-title text-center mb-4">Contact Us</h1>
-
-      <div className="contacts-content d-flex flex-wrap justify-content-center">
-        <div className="contact-info text-center mb-5">
-          <h2 className="mb-3">Get in Touch</h2>
-          <div className="info-item d-flex justify-content-center align-items-center mb-2">
-            <i className="fas fa-phone me-2"></i>
-            <p className="mb-0">+91 9922736350</p>
-          </div>
-          <div className="info-item d-flex justify-content-center align-items-center">
-            <i className="fas fa-envelope me-2"></i>
-            <p className="mb-0">vivekmuthe4@gmail.com</p>
-          </div>
+    <div className="contact-container">
+      <div className="contact-wrapper">
+        {/* Header */}
+        <div className="contact-header">
+          <h1 className="contact-title">
+            Get In <span className="contact-title-gradient">Touch</span>
+          </h1>
+          <p className="contact-subtitle">
+            Have a question or want to work together? We'd love to hear from you.
+          </p>
         </div>
 
-        {/* <form className="contact-form w-100 w-md-50" onSubmit={handleSubmit}>
-          <div className="mb-3">
-            <label htmlFor="name" className="form-label">Name</label>
-            <input
-              type="text"
-              className="form-control"
-              id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-              placeholder="Enter your name"
-            />
-          </div>
+        <div className="contact-content">
+          {/* Single Contact Box */}
+          <div className="contact-box">
+            <div className="contact-sections">
+              
+              {/* Phone Contact */}
+              <div className="contact-section contact-section-phone">
+                <div className="contact-icon contact-icon-phone">
+                  <Phone className="icon" />
+                </div>
+                <div className="contact-info">
+                  <h3 className="contact-method-title">Call Me</h3>
+                  <p className="contact-method-desc">Ready to discuss your project</p>
+                  <a 
+                    href="tel:+919922736350" 
+                    className="contact-link contact-link-phone"
+                  >
+                    +91 9922736350
+                  </a>
+                  <p className="contact-availability">Available 9 AM - 8 PM IST</p>
+                </div>
+              </div>
 
-          <div className="mb-3">
-            <label htmlFor="email" className="form-label">Email</label>
-            <input
-              type="email"
-              className="form-control"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-              placeholder="Enter your email"
-            />
-          </div>
+              {/* Email Contact */}
+              <div className="contact-section contact-section-email">
+                <div className="contact-icon contact-icon-email">
+                  <Mail className="icon" />
+                </div>
+                <div className="contact-info">
+                  <h3 className="contact-method-title">Email Me</h3>
+                  <p className="contact-method-desc">Send me a detailed message</p>
+                  <a 
+                    href="mailto:vivekmuthe4@gmail.com" 
+                    className="contact-link contact-link-email"
+                  >
+                    vivekmuthe4@gmail.com
+                  </a>
+                  <p className="contact-availability">Response within 24 hours</p>
+                </div>
+              </div>
 
-          <div className="mb-3">
-            <label htmlFor="message" className="form-label">Message</label>
-            <textarea
-              className="form-control"
-              id="message"
-              name="message"
-              rows="4"
-              value={formData.message}
-              onChange={handleChange}
-              required
-              placeholder="Type your message here..."
-            ></textarea>
-          </div>
+              {/* Location */}
+              <div className="contact-section contact-section-location">
+                <div className="contact-icon contact-icon-location">
+                  <MapPin className="icon" />
+                </div>
+                <div className="contact-info">
+                  <h3 className="contact-method-title">Location</h3>
+                  <p className="contact-method-desc">Working remotely worldwide</p>
+                  <p className="contact-link contact-link-location">Pune</p>
+                  <p className="contact-availability">Remote collaboration</p>
+                </div>
+              </div>
 
-          <button type="submit" className="btn btn-primary">Send Message</button>
-        </form> */}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

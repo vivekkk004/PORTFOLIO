@@ -18,7 +18,6 @@ const About = () => {
 
   return (
     <div className="about-bg py-5">
-
       {/* Scroll-In Header */}
       <motion.div
         ref={headerRef}
@@ -36,7 +35,6 @@ const About = () => {
 
       {/* Card Container */}
       <div className="container d-flex flex-wrap justify-content-center gap-4">
-
         {/* Card 1 */}
         <motion.div
           ref={card1Ref}
@@ -54,9 +52,7 @@ const About = () => {
           <div className="card-body-work">
             <h5 className="card-title mt-3 mb-2 font-bold">MERN Stack Developer</h5>
             <p className="card-text">
-As a MERN Stack Developer, I specialize in building scalable web applications using MongoDB, Express.js, React, and Node.js. I focus on creating responsive user interfaces, developing efficient backends, and ensuring seamless full-stack functionality.
-
-
+              As a MERN Stack Developer, I specialize in building scalable web applications using MongoDB, Express.js, React, and Node.js. I focus on creating responsive user interfaces, developing efficient backends, and ensuring seamless full-stack functionality.
             </p>
           </div>
         </motion.div>
@@ -73,16 +69,15 @@ As a MERN Stack Developer, I specialize in building scalable web applications us
           <img
             src="../data/uiux.jpeg"
             alt="UI UX Design"
-            className="card-img-about rounded-5"
+            className="card-img rounded-5"
           />
           <div className="card-body-work">
             <h5 className="card-title mt-3 mb-2 font-bold">UI UX Designer</h5>
             <p className="card-text">
-             I am a passionate UI/UX Designer dedicated to crafting visually appealing and highly functional designs. By understanding user behavior and combining creativity with usability principles, I deliver intuitive experiences that drive engagement and satisfaction.
+              I am a passionate UI/UX Designer dedicated to crafting visually appealing and highly functional designs. By understanding user behavior and combining creativity with usability principles, I deliver intuitive experiences that drive engagement and satisfaction.
             </p>
           </div>
         </motion.div>
-
       </div>
     </div>
   );

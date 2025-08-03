@@ -9,6 +9,7 @@ import Contact from './component/Contact/Contact.jsx';
 import SocialMedia from './component/SocialMedia.jsx';
 import Footer from './component/Footer.jsx';
  import HeroPage from './component/Home/HeroPage.jsx';
+import ProfessionalResume from './component/Resume/resume.jsx';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -25,6 +26,7 @@ function App() {
             <Work />
             <Skill />
             <Contact />
+            
           </>
         } />
         
@@ -32,6 +34,7 @@ function App() {
         <Route path="/work" element={<Work />} />
         <Route path="/skill" element={<Skill/>} />
         <Route path="/contacts" element={<Contact/>} />
+        <Route path="/resume" element={<ProfessionalResume/>} />
         {/* Add other routes as needed */}
       </Routes>
       <Footer/>

@@ -1,11 +1,9 @@
 import "./Hero.css";
-import React from "react";
-import { motion } from "framer-motion";
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
 
 const styles = {
   terminalBox: {
-    backgroundColor: "#1e1e1e", // Dark terminal background
+    backgroundColor: "#1e1e1e",
     borderRadius: "10px",
     width: "fit-content",
     margin: "6rem auto 2rem 3rem",
@@ -50,90 +48,55 @@ const styles = {
 
 const HeroSection = () => {
   return (
-    <div
-      className="row"
-      style={{
-        background: "#ffffff",  // White background
-        color: "#000",
-        padding: "2rem 1rem",
-        borderRadius: "15px",
-        boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)", // Subtle shadow for depth
-      }}
-    >
-      <div className="col-1"></div>
+    <div className="hero-container">
+      <div style={{ flex: "0 0 8.33%" }}></div>
+      
       {/* Text Column */}
-      <div className="hero col-md-5 col-sm-6 order-2 order-md-1 d-flex flex-column align-items-center">
+      <div className="hero">
         {/* Terminal-style Code Heading */}
-        <motion.div
-          initial={{ opacity: 0, y: -50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          style={styles.terminalBox}
-          className="terminal-box"
-        >
+        <div style={styles.terminalBox} className="terminal-box">
           <div style={styles.terminalHeader}>
             <span style={styles.dot("#ff5f56")}></span>
             <span style={styles.dot("#ffbd2e")}></span>
             <span style={styles.dot("#27c93f")}></span>
           </div>
-          <div style={styles.code}>{`</> Hi, I'm Vivek.`}</div>
-        </motion.div>
+          <div className="code-wrapper">
+            <div className="code-text" style={styles.code}>{`</> Hi, I'm Vivek.`}</div>
+          </div>
+        </div>
 
         {/* Tagline */}
-        <motion.div
-          initial={{ opacity: 0, x: -100 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1, delay: 0.5 }}
-          className="card-w"
-        >
+        <div className="card-w">
           MERN Stack Developer | UI/UX Designer
-        </motion.div>
+        </div>
 
         {/* Description */}
-        <motion.div
-          initial={{ opacity: 0, x: -100 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1, delay: 0.5 }}
-          className="card-h"
-        >
+        <div className="card-h">
           I'M A PASSIONATE WEB DEVELOPER WITH A STRONG FOUNDATION IN THE MERN
           STACK, UI/UX DESIGN, AND BUILDING SCALABLE FULL-STACK APPLICATIONS. I
           ENJOY TURNING IDEAS INTO FUNCTIONAL, USER-FRIENDLY DIGITAL PRODUCTS.
           ALWAYS EAGER TO LEARN AND EXPLORE NEW TECHNOLOGIES.
-        </motion.div>
+        </div>
 
         {/* Icons (Circular Colored Icons) */}
-        <div style={styles.icons}>
+        <div style={styles.icons} className="icons">
           <div style={styles.icon("#ff5f56")}></div>
           <div style={styles.icon("#ffbd2e")}></div>
           <div style={styles.icon("#27c93f")}></div>
         </div>
 
         {/* Buttons */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 1 }}
-          className="btn-container"
-        >
-          <Link to="/work">
-            <NeonButton text="View My Work  →" />
-          </Link>
-
-          <Link to="/contacts">
-            <NeonButton text="Get In Touch  →" />
-          </Link>
-        </motion.div>
+        <div className="btn-container">
+          <NeonButton text="View My Work  →" />
+          <NeonButton text="Get In Touch  →" />
+        </div>
       </div>
 
       {/* Image Column */}
-      <div className="col-md-5 order-1 order-md-2 d-flex justify-content-center">
-        <motion.img
+      <div className="image-column">
+        <img
           src="./data/1_OVlS9HX1mVeKJUrJlmXAzA.webp"
           alt="Vivek"
-          initial={{ opacity: 0, scale: 0.5 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1 }}
           style={{
             borderRadius: "50%",
             width: "33rem",
@@ -150,10 +113,12 @@ const HeroSection = () => {
 };
 
 const NeonButton = ({ text }) => {
+  const [isHovered, setIsHovered] = useState(false);
+  
   return (
-    <motion.button
-      whileHover={{ scale: 1.1, boxShadow: "0 0 20px #00bcd4" }}
-      whileTap={{ scale: 0.95 }}
+    <button
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
       style={{
         background: "#fff",
         border: "2px solid #00bcd4",
@@ -165,11 +130,14 @@ const NeonButton = ({ text }) => {
         transition: "all 0.3s ease",
         textTransform: "uppercase",
         fontWeight: "bold",
-        boxShadow: "0 0 10px #00bcd455, 0 0 20px #00bcd455",
+        boxShadow: isHovered 
+          ? "0 0 20px #00bcd4, 0 0 30px #00bcd455" 
+          : "0 0 10px #00bcd455, 0 0 20px #00bcd455",
+        transform: isHovered ? "translateY(-3px) scale(1.05)" : "translateY(0) scale(1)",
       }}
     >
       {text}
-    </motion.button>
+    </button>
   );
 };
 

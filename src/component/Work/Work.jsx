@@ -82,7 +82,7 @@ const Work = () => {
               </div>
             </div>
 
-            <div className="card-body-work">
+            <div className="card-body-work card-img-work">
               <h5 className="card-title mt-3 mb-1" style={{ margin: 0, padding: 0, lineHeight: 1.5 }}>
                 <b>{card.title}</b>
               </h5>
