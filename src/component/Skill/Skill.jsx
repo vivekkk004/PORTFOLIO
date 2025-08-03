@@ -1,7 +1,6 @@
 import React from 'react';
 import './Skill.css';
 
-// Data for Skills
 const skillCategories = [
     {
         title: 'Frontend',
@@ -38,29 +37,31 @@ const skillCategories = [
     },
 ];
 
-// Data for Timeline
 const timelineItems = [
     {
         type: 'Work',
         title: 'Software Developer Intern',
         subtitle: 'RadicleMindsIndia Pvt Ltd, Pune',
         date: '2025 – 2025',
-        description: 'Gained hands-on experience in full-stack development, contributing to production-level code and collaborating within a dynamic team environment using Agile methodologies.',
+        description:
+            'Gained hands-on experience in full-stack development, contributing to production-level code and collaborating within a dynamic team environment using Agile methodologies.',
     },
     {
         type: 'Work',
         title: 'Software Developer',
         subtitle: 'AiRevolution(A.I.R)-course selling platform ',
         date: '2025 – 2025',
-        description: 'Developed a full-stack course-selling platform with secure video handling, review analytics, and mobile-first UI, boosting engagement by 35% and reducing bounce rate by 40%.',
+        description:
+            'Developed a full-stack course-selling platform with secure video handling, review analytics, and mobile-first UI, boosting engagement by 35% and reducing bounce rate by 40%.',
     },
     {
         type: 'Education',
         title: 'B.Tech in AI & Data Science',
         subtitle: 'Savitribai Phule Pune University',
         date: '2022 – 2026',
-        description: 'Pursuing a comprehensive curriculum focused on machine learning, software engineering principles, and data structures.',
-    }
+        description:
+            'Pursuing a comprehensive curriculum focused on machine learning, software engineering principles, and data structures.',
+    },
 ];
 
 const Skill = () => {
@@ -68,28 +69,7 @@ const Skill = () => {
         <div className="sae-section">
             <div className="sae-container">
 
-
-          <div className="skills-category">
-            <h3>Front-End Development</h3>
-            <div className="skills-grid" >
-              {[
-                { name: 'HTML5', icon: 'fab fa-html5', level: 95 },
-                { name: 'CSS3', icon: 'fab fa-css3-alt', level: 90 },
-                { name: 'JavaScript', icon: 'fab fa-js', level: 85 },
-                { name: 'React', icon: 'fab fa-react', level: 80 },
-                { name: 'Vite', icon: 'fab fa-vuejs', level: 75 },
-                { name: 'Sass', icon: 'fab fa-sass', level: 70 },
-              ].map((skill, idx) => (
-                <div className="skill-card" key={idx}>
-                  <div className="skill-icon">
-                    <i className={skill.icon}></i>
-                  </div>
-                  <div className="skill-info">
-                    <h4>{skill.name}</h4>
-                    <div className="skill-bar">
-                      <div className="skill-level" style={{ width: `${skill.level}%` }}></div>
-
-                {/* --- Technologies & Skills Section (Now in one box) --- */}
+                {/* --- Technologies & Skills Section --- */}
                 <div className="sae-skills">
                     <h2 className="sae-section-title">Technologies & Skills</h2>
                     <div className="skills-unified-box">
@@ -106,7 +86,6 @@ const Skill = () => {
                                 </div>
                             </div>
                         ))}
-
                     </div>
                 </div>
 
