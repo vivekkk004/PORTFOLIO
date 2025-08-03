@@ -1,11 +1,10 @@
-<<<<<<< HEAD
+
 import React, { useState } from 'react';
 import './contact.css';
-=======
+
 import React from 'react';
 import { Phone, Mail, MapPin } from 'lucide-react';
 import './Contact.css';
->>>>>>> 3890684 (Updated portfolio with new features/design)
 
 const Contact = () => {
   return (
