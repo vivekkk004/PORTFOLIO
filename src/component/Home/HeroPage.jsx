@@ -87,8 +87,8 @@ const HeroSection = () => {
 
         {/* Buttons */}
         <div className="btn-container">
-          <NeonButton text="View My Work  →" />
-          <NeonButton text="Get In Touch  →" />
+          <NeonButton text="View My Work  →" onClick={() => navigate('/work')} />
+      <NeonButton text="Get In Touch  →" onClick={() => navigate('/contact')} />
         </div>
       </div>
 
